@@ -1,0 +1,409 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos para el header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    transition: 0.7s;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.9);
+    z-index: 10;
+}
+
+header.abajo {
+    background: #F9F7F0;
+    padding: 10px;
+}
+
+header .logo {
+    color: #072a40;
+    font-weight: bold;
+    font-size: 2em;
+    text-decoration: none;
+    transition: 1.5s;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+header ul li a {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0 15px;
+    text-decoration: none;
+    color: #072a40;
+    font-weight: bold;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+header a:hover {
+    color: #178ca4;
+}
+
+header.abajo .logo,
+header.abajo ul li a {
+    color: #072a40;
+}
+
+/* Estilos para Zona1 */
+.zona1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                url('img/pexels-cookiecutter-1148820.jpg') no-repeat center center/cover;
+    text-align: center;
+    color: #f9f7f0;
+    gap: 20px;
+  }
+  
+  .zona1 .info {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 50px;
+    width: 70%;
+    max-width: 1280px;
+    margin-top: 50px;
+    animation: wipe-in-right 2500ms ease;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .zona1 h1 {
+    font-size: 2.5em;
+    color: #072a40;
+    padding: 20px;
+  }
+  
+  .zona1 p {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    color: #072a40;
+  }
+  
+  .zona1 .beneficios {
+    list-style: none;
+    padding: 20px;
+  }
+  
+  .zona1 .beneficios li {
+    font-size: 1.2em;
+    color: #072a40;
+    margin-bottom: 20px;
+   
+  }
+  
+  .zona1 .beneficios li i {
+    font-size: 1.5em;
+    margin-right: 10px;
+    color: #178ca4;
+  }
+  
+  /* CTA (Botón de llamada a la acción) */
+  .cta-button {
+    background-color: #072a40;
+    color: #f9f7f0;
+    padding: 20px 30px;
+    font-size: 1.3em;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .cta-button:hover {
+    background-color: #178ca4;
+    color: #072a40;
+    transform: scale(1.05);
+  }
+
+@keyframes wipe-in-right {
+    0% {
+        clip-path: inset(0 100% 0 0);
+        border-radius: 10px;
+    }
+    100% {
+        clip-path: inset(0 0 0 0);
+        border-radius: 10px;
+    }
+}
+
+/* Contenidos Generales */
+.content {
+    padding: 80px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.price {
+    background: url(img/pexels-cottonbro-5473311.jpg) no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.card-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 40px 20px;
+}
+
+.card {
+    background: #f6f4e8;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin: 10px;
+    width: 280px; /* Ajusta según tus necesidades */
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card h3 {
+    font-size: 1.3em;
+
+    color: #02225eec;
+    margin-bottom: 15px;
+}
+
+.card .price {
+    font-size: 1.5em;
+    color: #072a40;
+    background:#178ca4 ;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.card ul {
+    list-style: none;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.card ul li {
+    margin: 5px 0;
+    color: #1d3124;
+}
+
+.button {
+    background-color: #072a40;
+    color: #f6f4e8;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 1em;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #178ca4;
+}
+
+
+/* Slider */
+.slider-frame {
+    width: 100%;
+    max-width: 940px;
+    margin: 0 auto 0;
+    overflow: hidden;
+}
+
+.slider-frame ul {
+    display: flex;
+    padding: 0;
+    width: 400%;
+    animation: slide 20s infinite alternate ease-in-out;
+}
+
+.slider-frame li {
+    width: 100%;
+    list-style: none;
+}
+
+.slider-frame img {
+    width: 100%;
+    max-width: 940px;
+}
+
+@keyframes slide {
+    0% { margin-left: 0; }
+    20% { margin-left: 0; }
+    25% { margin-left: -100%; }
+    45% { margin-left: -100%; }
+    50% { margin-left: -200%; }
+    70% { margin-left: -200%; }
+    75% { margin-left: -300%; }
+    100% { margin-left: -300%; }
+}
+
+/* Footer */
+footer {
+    background-color: #072a40;
+    padding: 30px 20px;
+    color: #F9F7F0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.footer-container {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.footer-logo .logo {
+    font-size: 2em;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-logo .logo:hover {
+    color: #18b7be;
+}
+.contacto{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.correo_container button {
+    display: flex;
+    align-items: center;
+    border: none;
+    background-color: #178ca4;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.correo_container button:hover {
+    background-color: #18b7be;
+}
+.copy-feedback {
+    display: none;
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #178ca4;
+    transition: opacity 0.5s ease;
+}
+
+.copy-feedback.show {
+    display: inline-block;
+    opacity: 1;
+}
+
+.copy-feedback.hide {
+    opacity: 0;
+}
+.contact-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    gap: 15px; /* Espacio entre los íconos */
+}
+
+.contact-icons a {
+    color: #F9F7F0; /* Color de los íconos */
+    font-size: 1.5em; /* Tamaño de los íconos */
+    transition: color 0.3s;
+}
+
+.contact-icons a:hover {
+    color: #178ca4; /* Color al pasar el cursor */
+}
+
+/* Media Queries para dispositivos pequeños */
+@media (max-width: 480px) {
+    .zona1 { 
+        flex-direction: column;
+        height: auto;
+       
+    }
+    .zona1 .info{
+    width: 90%;
+    margin-top: 80px;
+    } 
+    .zona1 .servicios{
+        display: flex;
+       
+    }
+    .card-container {
+        margin-top: 30px;
+    }
+
+   .button {
+        padding: 10px 20px;
+        font-size: 20px;
+    }
+
+    nav ul li a {
+        font-size: 1em;
+    }
+
+    footer {
+        padding: 20px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+/* Animaciones 
+@keyframes wipe-in-right {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}*/
